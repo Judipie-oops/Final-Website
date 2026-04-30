@@ -14,10 +14,15 @@
     --cota-purple: #702b63;
 
     --boldest: 800;
+    --bold: 700;
+
+    --h1-size: 23pt;
+    --h2-size: 18pt;
 }
 
 * {
     font-family: var(--font-style);
+    background-color: #4298b5;
 }
 
 img {
@@ -25,7 +30,18 @@ img {
 }
 
 h1 {
+    font-weight: var(--boldest);
+    color: white;
+    background-color: black;
+    font-size: var(--h1-size);
+    text-align: center;
+}
+
+h2 {
     font-weight: var(--bold);
+    color: black;
+    font-size: var(--h2-size);
+    text-align: center;
 }
 
 /* Navbar Style Section */
@@ -37,12 +53,29 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 5rem 0;
 }
 
 #title img {
     height: 125px;
     width: auto;
+}
+
+/* Location Style Section */
+#locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    background-color: white;
 }
 
 /* Map Style Section */
