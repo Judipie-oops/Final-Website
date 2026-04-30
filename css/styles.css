@@ -1,0 +1,47 @@
+:root {
+    --font-style: 'Raleway', 'Domine', 'Merriweather', sans-serif;
+
+    --pri-red: #ef5c7fff;
+    --pri-blue: #6696ffff;
+
+    --cota-red: #af272f;
+    --cota-blue: #00205b;
+    
+    --cota-gray: #797c81;
+    --cota-teal: #4298b5;
+    --cota-green: #00ae42;
+    --cota-yellow: #ffc708;
+    --cota-purple: #702b63;
+
+    --bold: 800;
+}
+
+* {
+    font-family: var(--font-style);
+    background-color: var(--pri-blue);
+}
+
+img {
+    width: 300px;
+}
+
+h1 {
+    font-weight: var(--bold);
+}
+
+/* Navbar Style Section */
+
+
+/* Title Style Section */
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#title img {
+    height: 125px;
+    width: auto;
+}
