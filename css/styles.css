@@ -13,12 +13,11 @@
     --cota-yellow: #ffc708;
     --cota-purple: #702b63;
 
-    --bold: 800;
+    --boldest: 800;
 }
 
 * {
     font-family: var(--font-style);
-    background-color: var(--pri-blue);
 }
 
 img {
@@ -44,4 +43,9 @@ h1 {
 #title img {
     height: 125px;
     width: auto;
+}
+
+/* Map Style Section */
+#map {
+    height: 500px;
 }
