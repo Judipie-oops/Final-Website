@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => { // VERY IMPORTANT, LETS JS WORK
     const menu = document.querySelector('#mobile_menu');
-    const menuLinks = document.querySelector('#nav-wrapper ul');
-    const navLogo = document.querySelector('#logo');
-    const navbar_toggle = document.querySelector(".navbar_toggle");
-    const nav_wrapper = document.querySelector('#nav-wrapper');
+    const menuLinks = document.querySelector('#nav_wrapper ul');
+    const navLogo = document.querySelector('#nav_wrapper a img');
+    const navbar_toggle = document.querySelector("#nav_toggle");
+    const nav_wrapper = document.querySelector('#nav_wrapper');
 
     // Display Mobile Menu
     const mobileMenu = () => {
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => { // VERY IMPORTANT, LETS JS
     // Show active menu when scrolling
     const highlightMenu = () => {
     const elem = document.querySelector('.highlight');
-    const homeMenu = document.querySelector('#home-page');
-    const aboutMenu = document.querySelector('#about-page');
-    const servicesMenu = document.querySelector('#services-page');
+    const homeMenu = document.querySelector('#locations');
+    const aboutMenu = document.querySelector('#services');
+    const servicesMenu = document.querySelector('#maps');
     let scrollPos = window.scrollY;
     console.log(scrollPos);
     
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => { // VERY IMPORTANT, LETS JS
         aboutMenu.classList.remove('highlight');
         return;
     }
-    if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
+    if ((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
         elem.classList.remove('highlight'); 
     }
     };
