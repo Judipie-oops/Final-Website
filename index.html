@@ -11,6 +11,9 @@
     <!-- JavaScript -->
     <script src="/js/apps.js"></script>
 
+    <!-- jQuery -->
+    <script src="jquery-3.7.1.min.js"></script>
+
     <!-- Raleway Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +29,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- FontAwesome API -->
+    <script src="https://kit.fontawesome.com/469e185b0f.js" crossorigin="anonymous"></script>
+
     <!-- Leaflet Maps API -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -39,11 +45,11 @@
 <body>
     <nav>
         <div id="nav-wrapper">
-            <img src="/res/Columbus_LogoLockUpRev_Red_RGB.png" alt="Columbus Logo (Red)">
+            <a href="#nav-wrapper"><img src="/res/Columbus_LogoLockUpRev_Red_RGB.png" alt="Columbus Logo (Red)" id="logo"></a>
             <ul>
-                <li class="nav_link">Locations</li>
-                <li class="nav_link">Services</li>
-                <li class="nav_link">Maps</li>
+                <li class="nav_link"><a href="#locations">Locations</a></li>
+                <li class="nav_link"><a href="#services">Services</a></li>
+                <li class="nav_link"><a href="#maps">Maps</a></li>
             </ul>
             <div class="nav_toggle" id="mobile_menu">
                 <span class="bar"></span>
@@ -113,6 +119,8 @@
     </div>
 
     <footer>
+        <a href="#nav-wrapper"><img src="/res/Columbus_LogoLockUpRev_Blue_RGB.png" alt="Columbus Logo (Red)" id="logo"></a>
+
         <p>Copyright &copy; 2026 City of Columbus, Ohio. All rights reserved.</p>
 
         <a href="https://www.columbus.gov/Site-Footer/Footer-Widgets/Contact-Us">Contact Us</a>
