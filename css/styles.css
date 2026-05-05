@@ -225,14 +225,21 @@ footer p {
         display: none;
     }
 
+    #mobile_wrapper {
+        width: auto;
+    }
+
+    #nav_wrapper {
+        justify-content: flex-end;
+    }
+
     #nav_wrapper ul {
         position: static;
         left: auto;
         top: auto;
         flex-direction: row;
         background-color: transparent;
-        width: auto;
-        text-align: left;
+        text-align: right;
         transition: none;
         display: flex;
     }
