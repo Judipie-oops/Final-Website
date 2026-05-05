@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 
     <!-- JavaScript -->
-    <script src="/js/apps.js"></script>
+    <script src="/js/apps.js" defer></script> <!-- DOM Contect Loaded soesn't work so we're doing this -->
 
     <!-- jQuery -->
     <script src="jquery-3.7.1.min.js"></script>
@@ -29,10 +29,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome API -->
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/469e185b0f.js" crossorigin="anonymous"></script>
 
-    <!-- Leaflet Maps API -->
+    <!-- Leaflet Maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -47,17 +47,19 @@
 
     <nav>
         <div id="nav_wrapper">
-            <a href="#title_link"><img src="/res/Columbus_LogoLockUpRev_Red_RGB.png" alt="Columbus Logo (Red)" id="logo"></a>
+            <div id="mobile_wrapper">
+                <a href="#title_link"><img src="/res/Columbus_LogoLockUpRev_Red_RGB.png" alt="Columbus Logo (Red)" id="logo"></a>
+                <div class="nav_toggle" id="mobile_menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
             <ul>
                 <li class="nav_link"><a href="#locations">Locations</a></li>
                 <li class="nav_link"><a href="#services">Services</a></li>
                 <li class="nav_link"><a href="#maps">Maps</a></li>
             </ul>
-            <div class="nav_toggle" id="mobile_menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 

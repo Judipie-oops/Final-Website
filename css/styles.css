@@ -25,7 +25,7 @@
 }
 
 body {
-    background-color: var(--pri-blue);
+    background: linear-gradient(180deg, var(--pri-blue), white, var(--pri-red));
 }
 
 img {
@@ -65,11 +65,42 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1001; /* Put above Leaflet map */
+    padding-top: 5px;
+}
+
+#nav_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--cota-blue);
+    border-radius: 15px;
 }
 
 #nav_wrapper ul {
     list-style-type: none;
     padding: 0;
+    left: -100%;
+    position: fixed;
+    top: 95px;
+    flex-direction: column;
+    background-color: var(--cota-blue);
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+#nav_wrapper ul.active {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#nav_wrapper ul li {
+    padding: 1rem 0;
 }
 
 #nav_wrapper ul li a {
@@ -77,6 +108,41 @@ nav {
     font-size: 28pt;
     font-weight: var(--boldest);
 }
+
+/* Hamburger Style */
+.nav_toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#mobile_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav_toggle .bar {
+    width: 51px;
+    height: 10px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.nav_toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-19px, 6px); 
+}
+
+.nav_toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-19px, -6px);
+}
+
 
 /* Title Style Section */
 #title {
@@ -107,6 +173,10 @@ nav {
     justify-content: center;
     margin-bottom: 4rem;
     background-color: transparent;
+}
+
+.column a img {
+    margin: 5px 0;
 }
 
 /* Map Style Section */
@@ -148,4 +218,30 @@ footer p {
 #social_icons a i {
     font-size: 30pt;
     color: black;
+}
+
+@media (min-width: 1000px) {
+    .nav_toggle {
+        display: none;
+    }
+
+    #nav_wrapper ul {
+        position: static;
+        left: auto;
+        top: auto;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        text-align: left;
+        transition: none;
+        display: flex;
+    }
+
+    #nav_wrapper ul.active {
+        left: auto;
+    }
+
+    #nav_wrapper ul li {
+        padding: 0 1rem;
+    }
 }
