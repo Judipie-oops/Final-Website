@@ -260,6 +260,11 @@ nav {
     height: 500px;
 }
 
+#maps div h2 {
+    max-width: 321px;
+    margin: 0 auto;
+}
+
 /* Footer Style Section */
 footer {
     display: flex;
