@@ -256,13 +256,17 @@ nav {
 }
 
 /* Map Style Section */
-#map {
-    height: 500px;
+#maps {
+    padding: 8rem 0;
 }
 
 #maps div h2 {
     max-width: 321px;
     margin: 0 auto;
+}
+
+#map {
+    height: 500px;
 }
 
 /* Footer Style Section */
