@@ -38,6 +38,8 @@ h1 {
     background-color: black;
     font-size: var(--h1-size);
     text-align: center;
+    margin: 5rem 0;
+    padding: 1rem;
 }
 
 h2 {
@@ -45,6 +47,9 @@ h2 {
     color: black;
     font-size: var(--h2-size);
     text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 30px;
 }
 
 h3 {
@@ -74,24 +79,23 @@ nav {
     justify-content: space-between;
     gap: 1rem;
     padding: 0.75rem 1rem;
+    padding-bottom: 1rem;
     background-color: var(--cota-blue);
     border-radius: 15px;
 }
 
 #nav_wrapper ul {
     list-style-type: none;
-    padding: 0;
-    left: -100%;
     position: fixed;
-    top: 95px;
-    flex-direction: column;
-    background-color: var(--cota-blue);
-    width: 90%;
-    max-width: 300px;
-    margin: 0 auto;
+    top: 105px;
+    left: -100%;
+    width: 20rem;
+    padding: 0;
+    margin: 0;
     text-align: center;
     transition: 0.3s;
     border-radius: 15px;
+    background-color: var(--cota-blue);
 }
 
 #nav_wrapper ul.active {
@@ -121,6 +125,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+.nav_toggle {
+    margin-top: 6px;
 }
 
 .nav_toggle .bar {
@@ -175,8 +183,63 @@ nav {
     background-color: transparent;
 }
 
+.column a {
+    position: relative;
+    display: inline-block;
+}
+
 .column a img {
-    margin: 5px 0;
+    margin: 10px 0;
+}
+
+.column a p {
+    transition: opacity 0.3s ease;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 14px;
+    color: black;
+    padding: 10px;
+    font-size: 12pt;
+    opacity: 0;
+}
+
+.column a:hover p {
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#uber {
+    height: 75px;
+    width: auto;
+}
+
+#cota {
+    height: 85px;
+    width: auto;
+}
+
+#yellow_cab {
+    height: 225px;
+    width: auto;
+}
+
+#taxi_service {
+    height: 150px;
+    width: auto;
+}
+
+#walk_score {
+    height: 85px;
+    width: auto;
+}
+
+#lyft {
+    height: 130px;
+    width: auto;
 }
 
 /* Services Style Section */
