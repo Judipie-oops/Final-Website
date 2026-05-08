@@ -159,7 +159,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0;
+    padding: 10rem 0;
 }
 
 #title img {
@@ -280,6 +280,7 @@ footer {
 
 footer p {
     padding-top: 1.75rem;
+    padding-bottom: 3rem;
 }
 
 .footer_link_item h2 {
@@ -296,12 +297,12 @@ footer p {
 #social_icons {
     display: flex;
     justify-content: space-evenly;
-    gap: 4rem;
-    padding-top: 2rem;
+    gap: 3rem;
+    padding: 2rem 0;
 }
 
 #social_icons a i {
-    font-size: 30pt;
+    font-size: 45pt;
     color: black;
 }
 
