@@ -22,6 +22,7 @@
 
 * {
     font-family: var(--font-style);
+    scrollbar-color: var(--cota-red) transparent;
 }
 
 body {
@@ -114,11 +115,17 @@ nav {
     font-weight: var(--boldest);
 }
 
+#nav_wrapper ul li a:hover {
+    color: var(--cota-yellow);
+    transition: 0.3s;
+}
+
 /* Hamburger Style */
 .nav_toggle {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-top: 6px;
 }
 
 #mobile_wrapper {
@@ -128,16 +135,16 @@ nav {
     width: 100%;
 }
 
-.nav_toggle {
-    margin-top: 6px;
-}
-
-.nav_toggle .bar {
+.bar {
     width: 51px;
     height: 10px;
     background-color: white;
     margin: 4px 0;
     transition: 0.3s;
+}
+
+.nav_toggle.active .bar {
+    background-color: var(--cota-red);
 }
 
 .nav_toggle.active .bar:nth-child(1) {
@@ -191,6 +198,7 @@ nav {
 
 .column a img {
     margin: 10px 0;
+    border-radius: 10px;
 }
 
 .column a p {
@@ -211,6 +219,8 @@ nav {
     background-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
     transition: opacity 0.3s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #uber {
