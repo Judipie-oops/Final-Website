@@ -374,7 +374,8 @@ footer p {
 
     /* Maps Desktop */
     #maps {
-
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
     }
 
     #map {
