@@ -16,7 +16,6 @@
     --boldest: 800;
     --bold: 700;
 
-    --h1-size: 23pt;
     --h2-size: 18pt;
 }
 
@@ -37,7 +36,7 @@ h1 {
     font-weight: var(--boldest);
     color: white;
     background-color: black;
-    font-size: var(--h1-size);
+    font-size: 23pt;
     text-align: center;
     margin: 5rem 0;
     padding: 1rem;
@@ -59,6 +58,7 @@ h3 {
     color: black;
     font-size: 14pt;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 a {
@@ -91,7 +91,7 @@ nav {
     position: fixed;
     top: 105px;
     left: -100%;
-    width: 20rem;
+    max-width: 30.5rem;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -113,6 +113,7 @@ nav {
     color: white;
     font-size: 28pt;
     font-weight: var(--boldest);
+    transition: 0.3s;
 }
 
 #nav_wrapper ul li a:hover {
@@ -273,6 +274,7 @@ nav {
 #maps div h2 {
     max-width: 321px;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 #map {
@@ -290,7 +292,7 @@ footer {
 
 footer p {
     padding-top: 1.75rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
 }
 
 .footer_link_item h2 {
@@ -317,6 +319,19 @@ footer p {
 }
 
 @media (min-width: 1000px) {
+    h1 {
+        font-size: 32pt;
+    }
+
+    h2 {
+        font-size: 22pt;
+    }
+
+    h3 {
+        font-size: 18pt;
+    }
+
+    /* Nav Desktop */
     .nav_toggle {
         display: none;
     }
@@ -325,19 +340,17 @@ footer p {
         width: auto;
     }
 
-    #nav_wrapper {
-        justify-content: flex-end;
+    #nav_wrapper a {
+        justify-content: flex-start;
     }
 
     #nav_wrapper ul {
+        display: flex;
         position: static;
-        left: auto;
-        top: auto;
         flex-direction: row;
         background-color: transparent;
         text-align: right;
-        transition: none;
-        display: flex;
+        justify-content: center;
     }
 
     #nav_wrapper ul.active {
@@ -346,5 +359,26 @@ footer p {
 
     #nav_wrapper ul li {
         padding: 0 1rem;
+    }
+
+    /* Title Desktop */
+    #title img {
+        height: 250px;
+    }
+
+    /* Location Desktop */
+    #locations {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* Maps Desktop */
+    #maps {
+
+    }
+
+    #map {
+        height: 600px;
+        width: 800px;
     }
 }
