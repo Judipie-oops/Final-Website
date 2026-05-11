@@ -16,6 +16,8 @@
     --boldest: 800;
     --bold: 700;
 
+    --transition-speed: 0.3s;
+
     --h2-size: 18pt;
 }
 
@@ -51,6 +53,7 @@ h2 {
     background-color: white;
     padding: 1rem;
     border-radius: 30px;
+    width: auto;
 }
 
 h3 {
@@ -95,7 +98,7 @@ nav {
     padding: 0;
     margin: 0;
     text-align: center;
-    transition: 0.3s;
+    transition: var(--transition-speed);
     border-radius: 15px;
     background-color: var(--cota-blue);
 }
@@ -113,12 +116,12 @@ nav {
     color: white;
     font-size: 28pt;
     font-weight: var(--boldest);
-    transition: 0.3s;
+    transition: var(--transition-speed);
 }
 
 #nav_wrapper ul li a:hover {
     color: var(--cota-yellow);
-    transition: 0.3s;
+    transition: var(--transition-speed);
 }
 
 /* Hamburger Style */
@@ -141,7 +144,7 @@ nav {
     height: 10px;
     background-color: white;
     margin: 4px 0;
-    transition: 0.3s;
+    transition: var(--transition-speed);
 }
 
 .nav_toggle.active .bar {
@@ -304,6 +307,12 @@ footer p {
     color: black;
     font-size: 12pt;
     font-weight: 500;
+    transition: var(--transition-speed);
+}
+
+.footer_link_item a:hover {
+    color: var(--cota-blue);
+    transition: var(--transition-speed);
 }
 
 #social_icons {
@@ -316,6 +325,12 @@ footer p {
 #social_icons a i {
     font-size: 45pt;
     color: black;
+    transition: var(--transition-speed);
+}
+
+#social_icons a i:hover {
+    color: var(--cota-blue);
+    transition: var(--transition-speed);
 }
 
 @media (min-width: 1000px) {
@@ -351,6 +366,7 @@ footer p {
         background-color: transparent;
         text-align: right;
         justify-content: center;
+        margin-top: 6px;
     }
 
     #nav_wrapper ul.active {
@@ -381,5 +397,19 @@ footer p {
     #map {
         height: 600px;
         width: 800px;
+    }
+
+    /* Footer Desktop */
+    #footer_links_wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #social_icons {
+        flex-direction: column;
+        padding: 54.725px;
     }
 }
