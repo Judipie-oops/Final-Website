@@ -1,0 +1,74 @@
+{
+    "attractions": [
+        {
+            "image": "/../res/ohio-res/ohio (239).jpg",
+            "alt": "Columbus Zoo and Aquarium",
+            "link": "https://www.columbuszoo.org/",
+            "description": "<b>Columbus Zoo and Zoombezi Bay</b> A world-class zoo with 7,000+ animals paired with Central Ohio's premier waterpark, where admission supports wildlife conservation.",
+            "map": "https://www.openstreetmap.org/way/30430453",
+            "name": "Columbus Zoo"
+        },{
+            "image": "/../res/ohio-res/ohio (93).jpg",
+            "alt": "Center of Science and Industry",
+            "link": "https://cosi.org/",
+            "description": "<b>CoSI (Center of Science and Industry)</b> Award-winning science museum with 300+ hands-on exhibits, a planetarium, and live shows. Has been voted #1 in the nation six times.",
+            "map": "https://www.openstreetmap.org/way/32873150",
+            "name":"CoSI"
+        },{
+            "image": "/../res/ohio-res/ohio (138).jpg",
+            "alt": "Columbus Museum of Art",
+            "link": "https://www.columbusmuseum.org/",
+            "description": "<b>Columbus Museum of Art</b> Downtown art museum founded in 1878, showcasing American and European modern art, photography, and works by beloved local artists.",
+            "map": "https://www.openstreetmap.org/way/293476179",
+            "name": "Columbus Museum of Art"
+        }
+    ],
+
+    "landmarks": [
+        {
+            "image": "/../res/istockphoto-820213184-612x612.jpg",
+            "alt": "Goodale Park",
+            "link": "https://www.sciotomile.com/",
+            "description": "<b>Goodale Park</b> Columbus's oldest park, donated in 1851, and today the heart of the Short North. Home to festivals, concerts, and community events.",
+            "map": "https://www.openstreetmap.org/way/500500235",
+            "name": "Goodale Park"
+        },{
+            "image": "/../res/ohio-res/ohio (57).jpg",
+            "alt": "Scioto Mile Deer Skyline",
+            "link": "https://www.sciotomile.com/",
+            "description": "<b>Franklin Park Conservatory and Botanical Gardens</b> A stunning botanical garden two miles from downtown, featuring exotic plants, seasonal exhibitions, and the world's only permanent Dale Chihuly glass collection in a botanical garden.",
+            "map": "https://www.openstreetmap.org/way/498151101",
+            "name": "Scioto Mile"
+        },{
+            "image": "/../res/ohio-res/ohio (160).jpg",
+            "alt": "The Scotts Miracle-Gro Foundation Children's Garden",
+            "link": "https://www.fpconservatory.org/discover/gardens-collections/childrens-garden/",
+            "description": "<b>Franklin Park Conservatory and Botanical Gardens</b> A stunning botanical garden two miles from downtown, featuring exotic plants, seasonal exhibitions, and the world's only permanent Dale Chihuly glass collection in a botanical garden.",
+            "map": "https://www.openstreetmap.org/way/498151101",
+            "name": "Franklin Park"
+        }
+    ],
+
+    "grub": [
+        {
+            "_comment": "name is also used for alt",
+            "image": "/res/CCP_0033.jpg",
+            "link": "https://thepearlrestaurant.com/",
+            "description": "<b>The Pearl</b> A lively Short North gastropub known for seasonal seafood, made-from-scratch comfort food, craft cocktails, and one of Columbus's best happy hours.",
+            "map": "https://www.openstreetmap.org/way/599895868#map=19/39.975273/-83.003415",
+            "name": "The Pearl"
+        },{
+            "image": "/res/866-400x300_6d601e49-5056-a348-3a529cfa74a996a0.jpg",
+            "link": "https://www.lindeys.com/",
+            "description": "<b>Speck</b> Italian eatery in downtown Columbus serving house-made pasta, seasonal dishes, and craft cocktails in a vibrant, eclectic setting.",
+            "map": "https://www.openstreetmap.org/node/4818700831",
+            "name": "Lindey's"
+        },{
+            "image": "/res/Speck-Interior_8EA26469-F13F-6AE7-E7BC46F9981DE2FF-8ea25c32c241941_8ea277ec-bace-830b-bc293815c220e894.jpg",
+            "link": "https://speckrestaurant.com/",
+            "description": "<b>Speck</b> Italian eatery in downtown Columbus serving house-made pasta, seasonal dishes, and craft cocktails in a vibrant, eclectic setting.",
+            "map": "https://www.openstreetmap.org/node/10759772005",
+            "name": "Speck Italian Eatery"
+        }
+    ]
+}

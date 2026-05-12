@@ -1,0 +1,36 @@
+{
+    "services": [
+        {
+            "_comment": "add (+ ' Logo') to name for alt",
+            "image": "/../res/Uber_Logo_Black_RGB.webp",
+            "link": "https://www.uber.com/global/en/r/cities/columbus-oh-us/",
+            "name": "Uber",
+            "style": "height: 75px; width: auto;"
+        },{
+            "image": "/../res/COTA_logo.png",
+            "link": "https://www.cota.com/",
+            "name": "COTA",
+            "style": "height: 85px; width: auto;"
+        },{
+            "image": "/../res/Columbus-Yellow-Cab-Logo-1.png",
+            "link": "https://yellowcabofcolumbus.com/",
+            "name": "Columbus Yellow Cab",
+            "style": "height: 225px; width: auto;"
+        },{
+            "image": "/../res/ll.webp",
+            "link": "https://columbustaxiservice.com/",
+            "name": "Columbus Taxi Service",
+            "style": "height: 150px; width: auto;"
+        },{
+            "image": "/../res/iduExtVtmR_1777471644210.png",
+            "link": "https://www.walkscore.com/score/columbus-college-of-art-and-design-columbus-oh",
+            "name": "Walk Score",
+            "style": "height: 85px; width: auto;"
+        },{
+            "image": "/../res/Lyft_Logo_Pink_RGB.png",
+            "link": "https://www.lyft.com/rider/cities/columbus-oh",
+            "name": "Lyft",
+            "style": "height: 130px; width: auto;"
+        }
+    ]
+}
