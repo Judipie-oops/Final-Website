@@ -18,35 +18,86 @@ if (hamburger && navMenu) {
   }));
 }
 
+let times = '';
+let xhrLocationsReq = new XMLHttpRequest();
+let xhrServicesReq = new XMLHttpRequest();
+
+xhrLocationsReq.onload = function() {
+  if (xhrLocationsReq.status === 200) {
+    const locResponseObject = JSON.parse(xhrLocationsReq.responseText);
+
+    let attCard = '';
+    let lanCard = '';
+    let grubCard = '';
+
+    for (let i = 0; i < locResponseObject.attractions.length; i++) {
+      const Item = locResponseObject.attractions[i];
+
+      attCard +=
+        `<a href="${Item.link}" target="_blank" rel="noopener noreferrer">
+          <img src="${Item.image}" alt="${Item.alt}">
+          <p>${Item.description}</p>
+        </a>`;
+    }
+
+    for (let i = 0; i < locResponseObject.landmarks.length; i++) {
+      const Item = locResponseObject.landmarks[i];
+
+      lanCard +=
+        `<a href="${Item.link}" target="_blank" rel="noopener noreferrer">
+          <img src="${Item.image}" alt="${Item.alt}">
+          <p>${Item.description}</p>
+        </a>`;
+    }
+
+    for (let i = 0; i < locResponseObject.grub.length; i++) {
+      const Item = locResponseObject.grub[i];
+
+      grubCard +=
+        `<a href="${Item.link}" target="_blank" rel="noopener noreferrer">
+          <img src="${Item.image}" alt="${Item.name}">
+          <p>${Item.description}</p>
+        </a>`;
+    }
+
+    document.querySelector('#attractionContent').innerHTML = attCard;
+    document.querySelector('#landmarkContent').innerHTML = lanCard;
+    document.querySelector('#grubContent').innerHTML = grubCard;
+  }
+};
+
+xhrLocationsReq.open("GET", "/res/data/locations.json", true);
+xhrLocationsReq.send();
+
 const ohioArray = [];
 
 for (let i = 1; i <= 239; i++) {
   ohioArray.push(`/res/ohio-res/ohio (${i}).jpg`)
 }
 
-function randomImageScroll() {
-  const random = Math.floor(Math.random() * ohioArray.length);
-  const selection = ohioArray[random];
-  const title = document.getElementById("title");
+// function randomImageScroll() {
+//   const random = Math.floor(Math.random() * ohioArray.length);
+//   const selection = ohioArray[random];
+//   const title = document.getElementById("title");
 
-  if (title) {
-    title.style.backgroundImage = `url(${selection})`;
-    title.style.backgroundSize = "cover";
-    title.style.backgroundPosition = "center center";
-    title.style.backgroundRepeat = "no-repeat";
-  }
-}
+//   if (title) {
+//     title.style.backgroundImage = `url(${selection})`;
+//     title.style.backgroundSize = "cover";
+//     title.style.backgroundPosition = "center center";
+//     title.style.backgroundRepeat = "no-repeat";
+//   }
+// }
 
-function updateTitleBackgroundPosition() {
-  const title = document.getElementById("title");
-  if (!title) return;
+// function updateTitleBackgroundPosition() {
+//   const title = document.getElementById("title");
+//   if (!title) return;
 
-  const scrollY = window.scrollY;
-  title.style.backgroundPosition = `center calc(50% + ${scrollY * 0.25}px)`;
-}
+//   const scrollY = window.scrollY;
+//   title.style.backgroundPosition = `center calc(50% + ${scrollY * 0.25}px)`;
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
-  randomImageTest();
-  updateTitleBackgroundPosition();
-  window.addEventListener("scroll", updateTitleBackgroundPosition);
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   randomImageTest();
+//   updateTitleBackgroundPosition();
+//   window.addEventListener("scroll", updateTitleBackgroundPosition);
+// });

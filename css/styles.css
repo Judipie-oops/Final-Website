@@ -186,7 +186,7 @@ nav {
     justify-content: center;
 }
 
-.column {
+.column section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,17 +195,17 @@ nav {
     background-color: transparent;
 }
 
-.column a {
+.column section a {
     position: relative;
     display: inline-block;
 }
 
-.column a img {
+.column section a img {
     margin: 10px 0;
     border-radius: 10px;
 }
 
-.column a p {
+.column section a p {
     transition: opacity 0.3s ease;
     background-color: transparent;
     position: absolute;
@@ -219,7 +219,7 @@ nav {
     opacity: 0;
 }
 
-.column a:hover p {
+.column section a:hover p {
     background-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
     transition: opacity 0.3s ease;

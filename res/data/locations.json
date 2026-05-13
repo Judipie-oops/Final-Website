@@ -51,7 +51,6 @@
 
     "grub": [
         {
-            "_comment": "name is also used for alt",
             "image": "/res/CCP_0033.jpg",
             "link": "https://thepearlrestaurant.com/",
             "description": "<b>The Pearl</b> A lively Short North gastropub known for seasonal seafood, made-from-scratch comfort food, craft cocktails, and one of Columbus's best happy hours.",
