@@ -23,7 +23,7 @@
 
 * {
     font-family: var(--font-style);
-    scrollbar-color: var(--cota-red) transparent;
+    scrollbar-color: black transparent;
 }
 
 body {
@@ -227,36 +227,6 @@ nav {
     border-bottom-right-radius: 10px;
 }
 
-#uber {
-    height: 75px;
-    width: auto;
-}
-
-#cota {
-    height: 85px;
-    width: auto;
-}
-
-#yellow_cab {
-    height: 225px;
-    width: auto;
-}
-
-#taxi_service {
-    height: 150px;
-    width: auto;
-}
-
-#walk_score {
-    height: 85px;
-    width: auto;
-}
-
-#lyft {
-    height: 130px;
-    width: auto;
-}
-
 /* Services Style Section */
 #services {
     display: flex;
@@ -265,7 +235,7 @@ nav {
     justify-content: center;
 }
 
-#services div a img {
+#services section a img {
     margin: 30px 0;
 }
 
