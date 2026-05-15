@@ -28,6 +28,7 @@ xhrLocationsReq.onload = function() {
 
     let attCard = ''; let lanCard = ''; let grubCard = '';
     let footAttCard = ''; let footLanCard = ''; let footGrubCard = '';
+    let mapAttCard = ''; let mapLanCard = ''; let mapGrubCard = ''
 
     for (let i = 0; i < locResponseObject.attractions.length; i++) {
       const Item = locResponseObject.attractions[i];
@@ -36,6 +37,9 @@ xhrLocationsReq.onload = function() {
       <img src="${Item.image}" alt="${Item.alt}"><p>${Item.description}</p></a>`;
 
       footAttCard += `<a href="${Item.map}" target="_blank" rel="noopener noreferrer">${Item.name}</a>`;
+
+      mapAttCard += `<script>var ${Item.mapVar} = L.marker([${Item.mapPoint}]).addTo(map);
+      ${Item.mapVar}.bindPopup("${Item.mapName}").openPopup;</script>`
     }
 
     for (let i = 0; i < locResponseObject.landmarks.length; i++) {
@@ -45,6 +49,9 @@ xhrLocationsReq.onload = function() {
       <img src="${Item.image}" alt="${Item.alt}"><p>${Item.description}</p></a>`;
 
       footLanCard += `<a href="${Item.map}" target="_blank" rel="noopener noreferrer">${Item.name}</a>`;
+
+      mapLanCard += `<script>var ${Item.mapVar} = L.marker([${Item.mapPoint}]).addTo(map);
+      ${Item.mapVar}.bindPopup("${Item.mapName}").openPopup;</script>`
     }
 
     for (let i = 0; i < locResponseObject.grub.length; i++) {
@@ -54,6 +61,9 @@ xhrLocationsReq.onload = function() {
       <img src="${Item.image}" alt="${Item.name}"><p>${Item.description}</p></a>`;
 
       footGrubCard += `<a href="${Item.map}" target="_blank" rel="noopener noreferrer">${Item.name}</a>`;
+
+      mapGrubCard += `<script>var ${Item.mapVar} = L.marker([${Item.mapPoint}]).addTo(map);
+      ${Item.mapVar}.bindPopup("${Item.Name}").openPopup;</script>`
     }
 
     document.querySelector('#attractionContent').innerHTML = attCard;
@@ -62,7 +72,10 @@ xhrLocationsReq.onload = function() {
     document.querySelector('#attractionFooter').innerHTML = footAttCard;
     document.querySelector('#landmarkFooter').innerHTML = footLanCard;
     document.querySelector('#grubFooter').innerHTML = footGrubCard;
-  }
+    document.querySelector('#mapAttContent').innerHTML = mapAttCard;
+    document.querySelector('#mapLanContent').innerHTML = mapLanCard;
+    document.querySelector('#mapGrubContent').innerHTML = mapGrubCard;
+    }
 };
 
 xhrServicesReq.onload = function() {
@@ -87,8 +100,7 @@ xhrServicesReq.onload = function() {
 
 xhrLocationsReq.open("GET", "/../res/data/locations.json", true);
 xhrServicesReq.open("GET", "/../res/data/services.json", true);
-xhrLocationsReq.send();
-xhrServicesReq.send();
+xhrLocationsReq.send(); xhrServicesReq.send();
 
 const ohioArray = [];
 
