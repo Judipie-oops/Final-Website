@@ -102,35 +102,82 @@ xhrLocationsReq.open("GET", "/../res/data/locations.json", true);
 xhrServicesReq.open("GET", "/../res/data/services.json", true);
 xhrLocationsReq.send(); xhrServicesReq.send();
 
+// Array for images for scrollers
 const ohioArray = [];
-
 for (let i = 1; i <= 239; i++) {
-  ohioArray.push(`/res/ohio-res/ohio (${i}).jpg`)
+  ohioArray.push(`/res/ohio-res/ohio (${i}).jpg`);
 }
 
-// function randomImageScroll() {
-//   const random = Math.floor(Math.random() * ohioArray.length);
-//   const selection = ohioArray[random];
-//   const title = document.getElementById("title");
+const rows = [
+  { element: document.getElementById('track1'), direction: 'left',  scroll: 0, speed: 1.3 }, // Slightly fast haha
+  { element: document.getElementById('track2'), direction: 'right', scroll: 0, speed: 1 }, // Normal speed haha
+  { element: document.getElementById('track3'), direction: 'left',  scroll: 0, speed: 0.7 } // Slightly slow haha
+];
 
-//   if (title) {
-//     title.style.backgroundImage = `url(${selection})`;
-//     title.style.backgroundSize = "cover";
-//     title.style.backgroundPosition = "center center";
-//     title.style.backgroundRepeat = "no-repeat";
-//   }
-// }
+// Distributes images to their own tracks
+ohioArray.forEach((src, index) => {
+  const targetTrackIndex = index % rows.length;
+  
+  const img = document.createElement('img');
+  img.src = src;
+  img.classList.add('carousel-item');
+  
+  rows[targetTrackIndex].element.appendChild(img);
+});
 
-// function updateTitleBackgroundPosition() {
-//   const title = document.getElementById("title");
-//   if (!title) return;
+function animateMultiCarousel() {
+  rows.forEach(row => {
+    const track = row.element;
+    
+    if (row.direction === 'left') {
+      // Logic for scrolling left
+      row.scroll -= row.speed;
+      const firstChild = track.firstElementChild;
+      
+      if (firstChild) {
+        const margin = parseFloat(window.getComputedStyle(firstChild).marginRight) || 0;
+        const width = firstChild.getBoundingClientRect().width + margin;
 
-//   const scrollY = window.scrollY;
-//   title.style.backgroundPosition = `center calc(50% + ${scrollY * 0.25}px)`;
-// }
+        // When the track shifts far enough right, bring the back item to the front
+        if (Math.abs(row.scroll) >= width) {
+          track.appendChild(firstChild)
+          row.scroll += width;
+        }
+      }
+    } else {
+      // Logic for scrolling right
+      row.scroll += row.speed;
+      const lastChild = track.lastElementChild;
+      
+      if (lastChild) {
+        const margin = parseFloat(window.getComputedStyle(lastChild).marginRight) || 0;
+        const width = lastChild.getBoundingClientRect().width + margin;
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   randomImageTest();
-//   updateTitleBackgroundPosition();
-//   window.addEventListener("scroll", updateTitleBackgroundPosition);
-// });
+        // When the track shifts far enough right, bring the back item to the front
+        if (row.scroll >= 0) {
+          track.insertBefore(lastChild, track.firstElementChild);
+          row.scroll -= width;
+        }
+      }
+    }
+
+    // Apply the translation to this specific row
+    track.style.transform = `translateX(${row.scroll}px)`;
+  });
+
+  requestAnimationFrame(animateMultiCarousel);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Ensures the right-scrolling row populates its left boundary
+  const row2 = rows[1];
+  const lastChild = row2.element.lastElementChild;
+  if (lastChild) {
+    const margin = parseFloat(window.getComputedStyle(lastChild).marginRight) || 0;
+    const width = lastChild.getBoundingClientRect().width + margin;
+    row2.element.insertBefore(lastChild, row2.element.firstElementChild);
+    row2.scroll = -width;
+  }
+
+  requestAnimationFrame(animateMultiCarousel);
+});
