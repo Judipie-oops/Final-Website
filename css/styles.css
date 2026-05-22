@@ -24,7 +24,6 @@
 body {
     background: linear-gradient(180deg, var(--pri-blue), white, var(--pri-red));
     margin: 0;
-    padding: 0;
 }
 
 img {
@@ -73,6 +72,8 @@ nav {
     top: 0;
     z-index: 1001; /* Put above Leaflet map */
     padding-top: 5px;
+    margin-left: 0.33rem;
+    margin-right: 0.77rem; /* Makes room for scrollbar */
 }
 
 #nav_wrapper {
