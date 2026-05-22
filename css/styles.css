@@ -71,7 +71,7 @@ a {
     justify-content: center;
 }
 
-/* Navbar Style Section */
+/* Navbar Style div */
 nav {
     position: sticky;
     top: 0;
@@ -165,7 +165,7 @@ nav {
 }
 
 
-/* Title Style Section */
+/* Title Style div */
 #title {
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@ nav {
     justify-content: center;
 }
 
-.column section {
+.column div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,17 +225,17 @@ nav {
     background-color: transparent;
 }
 
-.column section a {
+.column div a {
     position: relative;
     display: inline-block;
 }
 
-.column section a img {
+.column div a img {
     margin: 10px 0;
     border-radius: 10px;
 }
 
-.column section a p {
+.column div a p {
     transition: opacity 0.3s ease;
     background-color: transparent;
     position: absolute;
@@ -249,7 +249,7 @@ nav {
     opacity: 0;
 }
 
-.column section a:hover p {
+.column div a:hover p {
     background-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -265,7 +265,7 @@ nav {
     justify-content: center;
 }
 
-#services section a img {
+#services div a img {
     margin: 30px 0;
 }
 
@@ -282,6 +282,13 @@ nav {
 
 #map {
     height: 500px;
+}
+
+.leaflet-container .leaflet-control-attribution {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 5px;
 }
 
 /* Footer Style Section */
@@ -360,13 +367,13 @@ footer p {
     }
 
     #nav_wrapper ul {
-        display: flex;
         position: static;
-        flex-direction: row;
+        left: auto;
+        width: auto;
         background-color: transparent;
-        text-align: right;
-        justify-content: center;
-        margin-top: 6px;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
     }
 
     #nav_wrapper ul.active {
@@ -399,13 +406,23 @@ footer p {
 
     /* Maps Desktop */
     #maps {
-        display: grid;
-        grid-template-columns: 1fr, 1fr;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 8rem 0;
+    }
+
+    #maps > div:first-child {
+        flex: 1; /* Allow the first div to take up remaining space */
+        max-width: 35%;
     }
 
     #map {
+        flex: 1; /* Allow the map to take up remaining space */
+        min-width: 300px;
         height: 600px;
-        width: 800px;
+        width: 75%;
     }
 
     /* Footer Desktop */
