@@ -19,7 +19,7 @@ if (hamburger && navMenu) {
   }));
 }
 
-// JSON INTERPERATER WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+// JSON INTERPERATER CODE WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 let times = '';
 let xhrLocationsReq = new XMLHttpRequest();
 let xhrServicesReq = new XMLHttpRequest();
@@ -115,7 +115,7 @@ xhrLocationsReq.open("GET", "/../res/data/locations.json", true);
 xhrServicesReq.open("GET", "/../res/data/services.json", true);
 xhrLocationsReq.send(); xhrServicesReq.send();
 
-// CAROUSEL CODE WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+// TITLE CAROUSEL CODE WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 const ohioArray = []; // Array for images for scrollers
 for (let i = 1; i <= 239; i++) {
   ohioArray.push(`/res/ohio-res/ohio (${i}).jpg`);
