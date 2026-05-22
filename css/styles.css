@@ -281,13 +281,6 @@ nav {
     height: 500px;
 }
 
-.leaflet-container .leaflet-control-attribution {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    gap: 5px;
-}
-
 /* Footer Style Section */
 footer {
     display: flex;
@@ -401,25 +394,36 @@ footer p {
         justify-content: space-evenly;
     }
 
+    /* Services Desktop */
+    #services div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        max-width: 70%;
+    }
+
+    #services div a {
+        flex: 0 0 calc(50% - 5rem);
+    }
+
     /* Maps Desktop */
     #maps {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 2rem;
         padding: 8rem 0;
     }
 
-    #maps > div:first-child {
+    #maps div:first-child {
         flex: 1; /* Allow the first div to take up remaining space */
-        max-width: 35%;
+        max-width: 40%;
     }
 
     #map {
         flex: 1; /* Allow the map to take up remaining space */
         min-width: 300px;
         height: 600px;
-        width: 75%;
+        margin-right: 8.75%;
     }
 
     /* Footer Desktop */
