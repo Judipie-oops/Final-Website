@@ -29,6 +29,8 @@
 
 body {
     background: linear-gradient(180deg, var(--pri-blue), white, var(--pri-red));
+    margin: 0;
+    padding: 0;
 }
 
 img {
