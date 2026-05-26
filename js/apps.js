@@ -32,7 +32,9 @@ function addMapMarker(item) {
   const popupText = item.mapName || item.name || ''; // Fallback to name if mapName is not provided (such as with grub)
   L.marker(coords)
     .addTo(map)
-    .bindPopup(popupText);
+    .bindPopup(popupText, {
+      className: 'custom-leaflet-popup'
+    });
 }
 
 // Load locations data from JSON files

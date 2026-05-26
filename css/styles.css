@@ -282,6 +282,18 @@ nav {
     height: 500px;
 }
 
+/* !important overrides any conflicting styles */
+.leaflet-attribution-flag {
+    height: 1.375em !important;
+}
+
+.leaflet-container .leaflet-control-attribution {
+    display: flex !important;
+    flex-direction: row !important;
+    width: auto !important;
+    gap: 5px !important;
+}
+
 /* Footer Style Section WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
 footer {
     display: flex;
@@ -417,7 +429,6 @@ footer p {
 
     #maps div:first-child {
         flex: 1; /* Allow the first div to take up remaining space */
-        max-width: 40%;
     }
 
     #map {
